@@ -1,4 +1,5 @@
-<head>
+<html ng-app="grande-colorado-pub">
+<head >
   <title>Portal Grande Colorado</title>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -261,175 +262,11 @@
               <div class="desc">Add a description of the image here</div>
             </div>
           </center>
+        </div>
           <!--  3 colunas fim-->
 
-
-
-          <!-- INICIO SIDEBAR -->
-        </div>
-        <div class="sidebar">
-
-          <br>
-          <div class="gadget">
-            <h2>Regiões</h2>
-            <div class="clr"></div>
-            <ul class="sb_menu">
-              <li>
-                <a href="#">- Grande Colorado</a>
-              </li>
-              <li>
-                <a href="#">- Sobradinho I e II</a>
-              </li>
-              <li>
-                <a href="#">- Região dos Lagos</a>
-              </li>
-              <li>
-                <a href="#">- DF 425</a>
-              </li>
-            </ul>
-          </div>
-          <div class="gadget">
-
-
-            <div style="width:100%; height:35px; margin-bottom:20px;">
-              <div style="display: inline-table; width:100%; border:0px">
-                <div style="float:left; width:auto; height:auto; border-bottom:solid 12px #2f3b66;">
-                  <h2 style="margin:0px; font-weight:normal; font-size:16pt;">Guia de Serviços</h2>
-                </div>
-              </div>
-              <div style="display: inline-table; width:100%; height:5px; border-top:dashed 1px #2f3b66; text-align:left;">
-                <img src="images/seta_titulo_azul2.png" style="margin-left:10px;">
-              </div>
-            </div>
-
-
-            <br>
-            <div class="clr"></div>
-            <ul class="ex_menu">
-
-
-              <li>
-                <a href="views\alimentacao.html">
-                  <img src="images\icones\cart.png" align="center">&nbsp Alimentação e Bebidas</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\dog.png" align="center">&nbsp Animais e Cia</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\arte.png" align="center">&nbsp Arte e Cultura</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\house.png" align="center">&nbsp Associações/Entidades</a>
-              </li>
-              <hr>
-
-              <li>
-                <a href="#">
-                  <img src="images\icones\car.png" align="center">&nbsp Automóveis e CIA</a>
-              </li>
-              <hr>
-
-              <li>
-                <a href="#">
-                  <img src="images\icones\money-bag.png" align="center">&nbsp Bancos e Seguradoras</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\lipstick.png" align="center">&nbsp Beleza e Estéticas</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\coffee.png" align="center">&nbsp Cafés e Docerias</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\wheelbarrow.png" align="center">&nbsp Casa e Construção</a>
-              </li>
-              <hr>
-
-              <li>
-                <a href="#">
-                  <img src="images\icones\baby.png" align="center">&nbsp Criança e Bebê</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\bicycle.png" align="center">&nbsp Diversão e Lazer</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\checklist.png" align="center">&nbsp Educação</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\man.png" align="center">&nbsp Serviços</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\running.png" align="center">&nbsp Esportes e Fitness</a>
-              </li>
-              <hr>
-
-              <li>
-                <a href="#">
-                  <img src="images\icones\balloons.png" align="center">&nbsp Festas e Eventos</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\hotel.png" align="center">&nbsp Hospedagem e Turismo</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\store.png" align="center">&nbsp Lojas e Comércios</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\hospital.png" align="center">&nbsp Medicina e Saúde</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\cutlery.png" align="center">&nbsp Restaurantes e Bares</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\editor.png" align="center">&nbsp Tecnologia e Informática</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\attachment.png" align="center">&nbsp Utilidade Pública</a>
-              </li>
-              <hr>
-              <li>
-                <a href="#">
-                  <img src="images\icones\shirt.png" align="center">&nbsp Vestuário</a>
-              </li>
-              <hr>
-              </p>
-
-
-            </ul>
-          </div>
-        </div>
-
-        <!-- FIM SIDEBAR -->
+          
+          <div ui-view="sidebar"></div>
 
 
 
@@ -519,7 +356,8 @@
   <!-- FIM FOOTER -->
 
 
-  <script src="scripts/main-652eeba67b.js"></script>
+<script src="scripts/main-2ccec56eeb.js"></script>
+
 
 </body>
 
