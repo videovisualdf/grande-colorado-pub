@@ -1,0 +1,33 @@
+<div class="mainbar">
+  <div class="article">
+    <img ng-src="{{categoria.icone}}" align="center"> <h3>&nbsp {{categoria.nome}}</h3>
+    <br>
+  </div>
+  <div class="article">
+  </div>
+  <a href="../views/anuncie.html">
+    <img src="../images/formato_anuncio_arranhaceu.png" style="float:right;width:160px;height:600px;">
+  </a>
+  <style>
+  </style>
+  <center>
+    <table id="subcategorias">
+      <tr ng-repeat="subcat in subcategorias">
+        <td>
+          <img src="..\images\play-button.png">{{subcat.nome}}</td>
+      </tr>      
+    </table>
+  </center>
+  <br>
+  <div class="clr"></div>
+  <div style="width:100%; height:35px; margin-bottom:20px;">
+    <div style="display: inline-table; width:100%; border:none">
+      <div style="float:left; width:auto; height:auto; border-bottom:solid 12px #2f3b66;">
+        <h2 style="margin:0px; font-weight:normal; font-size:16pt;">Destaques em Alimentação:</h2>
+      </div>
+    </div>
+    <div style="display: inline-table; width:100%; height:5px; border-top:dashed 1px #2f3b66; text-align:left;">
+      <img src="../images/seta_titulo_azul2.png" style="margin-left:10px;">
+    </div>
+  </div>
+</div>

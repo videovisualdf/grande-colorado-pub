@@ -34,7 +34,7 @@
     <div class="clr"></div>
     <ul class="ex_menu" ng-repeat="cat in categorias">
       <li>
-        <a href="#">
+        <a ui-sref="app.categorias({id: cat.id})">
           <img align="center" height="24" ng-src="{{cat.icone}}" /> &nbsp {{cat.nome}}
         </a>
       </li>
