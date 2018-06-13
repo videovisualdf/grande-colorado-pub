@@ -1,0 +1,77 @@
+<div class="mainbar">
+    <div class="article">
+        <h2>
+            <b>Dados da Empresa</b>
+        </h2>
+    </div>
+    <div class="article">
+        <div class="galleryEmpresa">
+            <img ng-src={{empresa.logo}} alt="Trolltunga Norway" width="300" height="200">
+            <div class="desc">
+                <p>
+                    <b>Nome: </b>{{empresa.nome}}
+                </p>
+                <p>
+                    <b>Endereço: </b>{{empresa.endereco}}
+                </p>
+                <p>
+                    <b>Telefone: </b>{{empresa.telefone}}
+                </p>
+                <p>
+                    <b>Site: </b>{{empresa.site}}
+                </p>
+                <p>
+                    <b>Facebook: </b>{{empresa.facebook}}
+                </p>
+                <p>
+                    <b>Instagram: </b>{{empresa.instagram}}
+                </p>
+                <p>
+                    <b>Twitter: </b>{{empresa.twitter}}
+                </p>
+                <p>
+                    <b>E-mail: </b>{{empresa.email}}
+                </p>
+                <p>
+                    <b>Descrição: </b>{{empresa.descricao}}
+                </p>
+            </div>
+        </div>
+    </div>
+    <div style="width:100%; height:35px; margin-bottom:20px;">
+        <div style="display: inline-table; width:100%; border:none">
+            <div style="float:left; width:auto; height:auto; border-bottom:solid 12px #2f3b66;">
+                <h2 style="margin:0px; font-weight:normal; font-size:16pt;">Categorias/SubCategorias/Destaques - {{empresa.nome}}:</h2>
+            </div>
+        </div>
+        <div style="display: inline-table; width:100%; height:5px; border-top:dashed 1px #2f3b66; text-align:left;">
+            <img src="../images/seta_titulo_azul2.png" style="margin-left:10px;">
+        </div>
+        <br>
+        <br>
+        <div id="no-more-tables">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="thead-inverse">Categoria</th>
+                        <th class="thead-inverse">Sub-Categoria</th>
+                        <th class="thead-inverse">É Destaque?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="cat in CategoriasEmpresa | orderBy: categoria.nome">
+                        <td data-title="Categoria">
+                            <img class="img-circle" height="25" ng-src="{{cat.categoria.icone}}" /> {{cat.categoria.nome}}
+                        </td>
+                        <td data-title="Subcategoria">
+                            {{cat.subcategoria.nome}}
+                        </td>
+                        <td data-title="Destaque">
+                            {{cat.destaque}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
