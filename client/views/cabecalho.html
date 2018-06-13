@@ -36,10 +36,14 @@
                 <!-- BUSCA INICIO -->
                 <center>
                     <div class="search">
-                        <form id="form" name="form" method="post" action="#">
+                        <form class="form-horizontal" name="BuscaForm" novalidate>
+                            <!--<form id="form" name="form" method="post" action="#">-->
                             <span>
-                                <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="" />
-                                <input name="b" type="image" src="images/search.gif" class="button" />
+                                <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="" ng-model="buscaPalavra" />
+                                <!--<input name="b" type="image" src="images/search.gif" class="button" ng-click="buscar()" />-->
+                                <a ui-sref="app.resultadobusca({palavra: buscaPalavra})">
+                                    <input name="b" type="image" src="images/search.gif" class="button" />
+                                </a>
                             </span>
                         </form>
                     </div>

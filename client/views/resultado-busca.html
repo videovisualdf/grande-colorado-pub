@@ -1,0 +1,45 @@
+<div class="mainbar">
+    <div class="article">
+        <h2>
+            <b>Resultados</b>
+        </h2>
+    </div>
+    <table id="subcategorias">
+        <tr>
+            <th>CATEGORIAS</th>
+        </tr>
+        <tr ng-repeat="categoria in categorias">
+            <td>
+                <a ui-sref="app.categorias({id: categoria.id})">
+                    <img ng-src={{categoria.icone}} height="24">{{categoria.nome}}
+                </a>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table id="subcategorias">
+        <tr>
+            <th>SUBCATEGORIAS</th>
+        </tr>
+        <tr ng-repeat="subcategoria in subcategorias | orderBy: categoria">
+            <td>
+                <a ui-sref="app.subcategorias({id: subcategoria.id})">
+                    <img ng-src={{subcategoria.categoria.icone}} height="24">{{subcategoria.categoria.nome}} - {{subcategoria.nome}}
+                </a>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <table id="subcategorias">
+        <tr>
+            <th>EMPRESAS</th>
+        </tr>
+        <tr ng-repeat="empresa in empresas">
+            <td>
+                <a ui-sref="app.empresa({id: empresa.id})">
+                    <img ng-src={{empresa.logo}} height="50">{{empresa.nome}}
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>

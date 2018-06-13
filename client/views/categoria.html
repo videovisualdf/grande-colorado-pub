@@ -34,11 +34,12 @@
     <br>
     <div class="gallery" ng-repeat="catsEmp in destaques">
       <a ui-sref="app.empresa({id: catsEmp.empresaId})">
-        <img ng-src={{catsEmp.empresa.logo}} alt="Trolltunga Norway" width="300" height="200">
+        <img ng-src={{catsEmp.empresa.logo}} width="300" height="200">
       </a>
       <div class="desc">
         <b>{{catsEmp.empresa.nome}}</b>
-        <br>{{catsEmp.empresa.descricao}}</div>
+        <br>{{catsEmp.empresa.descricao}}
+      </div>
     </div>
   </div>
 
