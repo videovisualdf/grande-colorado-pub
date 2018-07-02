@@ -5,17 +5,18 @@
     <br>
   </div>
   <div class="article">
-      <a href="../views/anuncie.html">
-        <img src="../images/formato_anuncio_arranhaceu.png" style="float:right;width:160px;height:600px;">
-      </a>
+    <a href="../views/anuncie.html">
+      <img src="../images/formato_anuncio_arranhaceu.png" style="float:right;width:160px;height:600px;">
+    </a>
   </div>
-  
+
   <!--<div class="clr"></div>-->
   <center>
     <table id="subcategorias">
       <tr ng-repeat="subcat in subcategorias">
         <td>
-          <a ui-sref="app.subcategorias({id: subcat.id})"><img src="..\images\play-button.png">{{subcat.nome}}</a>
+          <a ui-sref="app.subcategorias({id: subcat.id})">
+            <img src="..\images\play-button.png">{{subcat.nome}}</a>
         </td>
       </tr>
     </table>
@@ -34,18 +35,27 @@
     <br>
     <div class="gallery" ng-repeat="catsEmp in destaques">
       <a ui-sref="app.empresa({id: catsEmp.empresaId})">
-        <img ng-src={{catsEmp.empresa.logo}} width="300" height="200">
+        <img ng-src={{catsEmp.empresa.logo}}>
       </a>
       <div class="desc">
-        <b>{{catsEmp.empresa.nome}}</b>
-        <br>{{catsEmp.empresa.descricao}}
+        <b>{{catsEmp.empresa.nome | limitTo: 40}}</b>
+        <br>{{catsEmp.empresa.descricao | limitTo: 120}}
       </div>
     </div>
   </div>
 
   <div style="width:100%; height:35px; margin-bottom:20px;">
     <div style="display: inline-table; width:100%; border:none; margin-top:5px;" ng-repeat="emp in empresasCategoria">
-        <a ui-sref="app.empresa({id: emp.empresaId})"><img ng-src={{emp.empresa.logo}} height="50">{{emp.empresa.nome}} - {{emp.empresa.telefone}}</a>
+      <a ui-sref="app.empresa({id: emp.empresaId})">
+        <img ng-src={{emp.empresa.logo}} height="50">
+
+        <b>{{emp.empresa.nome | limitTo: 30}}</b>
+        <br> Tel.:
+        <b>{{emp.empresa.telefone | limitTo: 30}}</b>
+        <br> Cel.:
+        <b>{{emp.empresa.celular | limitTo: 30}}</b>
+      </a>
     </div>
   </div>
+</div>
 </div>

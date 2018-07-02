@@ -6,42 +6,25 @@
     </div>
     <div class="article">
         <div class="galleryEmpresa">
-            <img ng-src={{empresa.logo}} alt="Trolltunga Norway" width="300" height="200">
+            <img ng-src={{empresa.logo}} alt="">
             <div class="desc">
-                <p>
-                    <b>Nome: </b>{{empresa.nome}}
-                </p>
-                <p>
-                    <b>Endereço: </b>{{empresa.endereco}}
-                </p>
-                <p>
-                    <b>Telefone: </b>{{empresa.telefone}}
-                </p>
-                <p>
-                    <b>Site: </b>{{empresa.site}}
-                </p>
-                <p>
-                    <b>Facebook: </b>{{empresa.facebook}}
-                </p>
-                <p>
-                    <b>Instagram: </b>{{empresa.instagram}}
-                </p>
-                <p>
-                    <b>Twitter: </b>{{empresa.twitter}}
-                </p>
-                <p>
-                    <b>E-mail: </b>{{empresa.email}}
-                </p>
-                <p>
-                    <b>Descrição: </b>{{empresa.descricao}}
-                </p>
+                    <b>Nome: </b>{{empresa.nome}}<br>
+                    <b>Endereço: </b>{{empresa.endereco}}<br>
+                    <b>Telefone: </b>{{empresa.telefone}}<br>
+                    <b>Celular: </b>{{empresa.celular}}<br>
+                    <b>Site: </b>{{empresa.site}}<br>
+                    <b>Facebook: </b>{{empresa.facebook}}<br>
+                    <b>Instagram: </b>{{empresa.instagram}}<br>
+                    <b>Twitter: </b>{{empresa.twitter}}<br>
+                    <b>E-mail: </b>{{empresa.email}}<br>
+                    <b>Descrição: </b>{{empresa.descricao}}<br>
             </div>
         </div>
     </div>
     <div style="width:100%; height:35px; margin-bottom:20px;">
         <div style="display: inline-table; width:100%; border:none">
             <div style="float:left; width:auto; height:auto; border-bottom:solid 12px #2f3b66;">
-                <h2 style="margin:0px; font-weight:normal; font-size:16pt;">Categorias/SubCategorias/Destaques - {{empresa.nome}}:</h2>
+                <h2 style="margin:0px; font-weight:normal; font-size:16pt;">Categorias/SubCategorias/Destaques<br>{{empresa.nome | limitTo: 50}}:</h2>
             </div>
         </div>
         <div style="display: inline-table; width:100%; height:5px; border-top:dashed 1px #2f3b66; text-align:left;">
