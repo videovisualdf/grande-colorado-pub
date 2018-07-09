@@ -1,60 +1,63 @@
-<div class="mainbar">
-    <div class="article">
-        <h2>
-            <b>Dados da Empresa</b>
-        </h2>
+<br>
+<div class="article">
+    <h2>
+        <b>Dados da Empresa</b>
+    </h2>
+</div>
+<br>
+
+<div class="media">
+    <img class="align-self-start mr-3" ng-src={{empresa.logo}} width="30%">
+    <div class="media-body">
+        <h5 class="mt-0">{{empresa.nome}}</h5>
+        <p align="justify">{{empresa.descricao}}</p>
     </div>
-    <div class="article">
-        <div class="galleryEmpresa">
-            <img ng-src={{empresa.logo}} alt="">
-            <div class="desc">
-                    <b>Nome: </b>{{empresa.nome}}<br>
-                    <b>Endereço: </b>{{empresa.endereco}}<br>
-                    <b>Telefone: </b>{{empresa.telefone}}<br>
-                    <b>Celular: </b>{{empresa.celular}}<br>
-                    <b>Site: </b>{{empresa.site}}<br>
-                    <b>Facebook: </b>{{empresa.facebook}}<br>
-                    <b>Instagram: </b>{{empresa.instagram}}<br>
-                    <b>Twitter: </b>{{empresa.twitter}}<br>
-                    <b>E-mail: </b>{{empresa.email}}<br>
-                    <b>Descrição: </b>{{empresa.descricao}}<br>
+</div>
+
+<div class="list-group">
+    <p class="list-group-item">Endereço: {{empresa.endereco}}</p>
+    <p class="list-group-item">Telefones: {{empresa.telefone}}</p>
+    <p class="list-group-item">Celular: {{empresa.celular}}</p>
+    <p class="list-group-item">Site: {{empresa.site}}</p>
+    <p class="list-group-item">E-mail: {{empresa.email}}</p>
+    <p class="list-group-item">Facebook: {{empresa.facebook}}</p>
+    <p class="list-group-item">Instagram: {{empresa.instagram}}</p>
+    <p class="list-group-item">Twitter: {{empresa.twitter}}</p>
+
+
+
+    <br>
+    <!-- GALLERIA -->
+    <!--
+            <div class="container gallery-container">
+                <div class="tz-gallery">
+    
+                    <a class="lightbox" href="images/loja01.jpg">
+                        <img src="images/loja01.jpg" width="30%">&nbsp
+                    </a>
+    
+                    <a class="lightbox" href="images/loja01.jpg">
+                        <img src="images/loja01.jpg" width="30%">&nbsp
+                    </a>
+    
+                    <a class="lightbox" href="images/loja01.jpg">
+                        <img src="images/loja01.jpg" width="30%">&nbsp
+                    </a>
+                    <br>
+                    <br>
+                    <a class="lightbox" href="images/loja01.jpg">
+                        <img src="images/loja01.jpg" width="30%">&nbsp
+                    </a>
+    
+                    <a class="lightbox" href="images/loja01.jpg">
+                        <img src="images/loja01.jpg" width="30%">&nbsp
+                    </a>
+    
+                    <a class="lightbox" href="images/loja01.jpg">
+                        <img src="images/loja01.jpg" width="30%">
+                    </a>
+    
+                </div>
             </div>
-        </div>
-    </div>
-    <div style="width:100%; height:35px; margin-bottom:20px;">
-        <div style="display: inline-table; width:100%; border:none">
-            <div style="float:left; width:auto; height:auto; border-bottom:solid 12px #2f3b66;">
-                <h2 style="margin:0px; font-weight:normal; font-size:16pt;">Categorias/SubCategorias/Destaques<br>{{empresa.nome | limitTo: 50}}:</h2>
-            </div>
-        </div>
-        <div style="display: inline-table; width:100%; height:5px; border-top:dashed 1px #2f3b66; text-align:left;">
-            <img src="../images/seta_titulo_azul2.png" style="margin-left:10px;">
-        </div>
-        <br>
-        <br>
-        <div id="no-more-tables">
-            <table>
-                <thead>
-                    <tr>
-                        <th class="thead-inverse">Categoria</th>
-                        <th class="thead-inverse">Sub-Categoria</th>
-                        <th class="thead-inverse">É Destaque?</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="cat in CategoriasEmpresa | orderBy: categoria.nome">
-                        <td data-title="Categoria">
-                            <img class="img-circle" height="25" ng-src="{{cat.categoria.icone}}" /> {{cat.categoria.nome}}
-                        </td>
-                        <td data-title="Subcategoria">
-                            {{cat.subcategoria.nome}}
-                        </td>
-                        <td data-title="Destaque">
-                            {{cat.destaque}}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+        -->
 </div>

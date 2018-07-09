@@ -1,58 +1,45 @@
-<div id="topoCabecalho" class="header">
-    <div class="header_resize">
-        <div class="logo">
-            <h1>
-                <a href="index.html">
-                    <span></span>
-                </a>
-            </h1>
-        </div>
-        <div class="menu_nav">
-            <ul>
-            </ul>
-            <div class="clr"></div>
-        </div>
-        <div class="clr"></div>
-        <div class="header_img">
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p> </p>
-            <p>
-                <div class="clr"></div>
-            </p>
-        </div>
-    </div>
-</div>
+<!-- Fixed navbar -->
+<nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: #03124a;">
+  <a class="navbar-brand" href="#"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Principal
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" ui-sref="app.anuncieaqui">Anuncie</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Contato</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sobre nós</a>
+      </li>
+    </ul>
+    <form class="form-inline mt-2 mt-md-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Pesquise" aria-label="Search" ng-model="buscaPalavra">
+      <a class="btn btn-outline-secondary my-2 my-sm-0" ui-sref="app.resultadobusca({palavra: buscaPalavra})">
+          Pesquise
+      </a>
+      <!--
+      <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Pesquise</button>
+      -->
+    </form>
+  </div>
+</nav>
+<!-- Fixed navbar FIM -->
 
-<div class="content">
-    <div class="content_resize">
-        <div class="mainbar">
-            <div class="article">
-                <!-- BUSCA INICIO -->
-                <center>
-                    <div class="search">
-                        <form class="form-horizontal" name="BuscaForm" novalidate>
-                            <!--<form id="form" name="form" method="post" action="#">-->
-                            <span>
-                                <input name="q" type="text" class="keywords" id="textfield" maxlength="50" value="" ng-model="buscaPalavra" />
-                                <!--<input name="b" type="image" src="images/search.gif" class="button" ng-click="buscar()" />-->
-                                <a ui-sref="app.resultadobusca({palavra: buscaPalavra})">
-                                    <input name="b" type="image" src="images/search.gif" class="button" />
-                                </a>
-                            </span>
-                        </form>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-                </center>
-                <!-- BUSCA FIM -->
-            </div>
-        </div>
-    </div>
+
+<!-- Primeira Linha - Cabeçalho -->
+<div class="container-fixed">
+  <a href="#">
+    <img src="images/topo2.png" width="100%">
+  </a>
 </div>
+<!-- Primeira Linha - Cabeçalho FIM -->

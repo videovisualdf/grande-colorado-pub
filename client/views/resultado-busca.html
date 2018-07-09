@@ -4,7 +4,7 @@
             <b>Resultados</b>
         </h2>
     </div>
-    <table id="subcategorias">
+    <table id="Categorias">
         <tr>
             <th>CATEGORIAS</th>
         </tr>
@@ -17,7 +17,7 @@
         </tr>
     </table>
     <br>
-    <table id="subcategorias">
+    <table id="Subcategorias">
         <tr>
             <th>SUBCATEGORIAS</th>
         </tr>
@@ -30,15 +30,28 @@
         </tr>
     </table>
     <br>
-    <table id="subcategorias">
+    <table id="Empresas">
         <tr>
             <th>EMPRESAS</th>
         </tr>
-        <tr ng-repeat="empresa in empresas">
+        <tr>
             <td>
-                <a ui-sref="app.empresa({id: empresa.id})">
-                    <img ng-src={{empresa.logo}} height="50">{{empresa.nome}}
-                </a>
+                <!-- Listagem de Empresas -->
+                <div ng-repeat="empresa in empresas">
+                    <div class="media">
+                        <a ui-sref="app.empresa({id: empresa.id})">
+                            <img class="align-self-center mr-3" height="58" ng-src={{empresa.logo}}>
+                        </a>
+                        <div class="media-body">
+                            <h5 class="mt-0">{{empresa.nome}}</h5>
+                            {{empresa.descricao}}
+                            <br> - {{empresa.endereco}} -
+                            <button type="button" class="btn btn-warning">Ver Telefone</button>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <!-- Fim Listagem de Empresas -->
             </td>
         </tr>
     </table>

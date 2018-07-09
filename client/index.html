@@ -1,21 +1,44 @@
-<html ng-app="grande-colorado-pub">
+<!DOCTYPE html>
+<html lang="en" ng-app="grande-colorado-pub">
+
 <head>
   <title>Portal Grande Colorado</title>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="styles/main-857b80f12f.css"/>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="styles/main-b3b969e2ef.css"/>
+
 </head>
+
 <body>
-  <div class="main">
-    <div ui-view="cabecalho"></div>
-    <div class="content">
-      <div class="content_resize">
+  <!-- Linha com CABEÇALHO-->
+  <div ui-view="cabecalho"></div>
+  <div class="container">
+    <div class="row">
+      <!-- Primeira Coluna *MENU*-->
+      <div class="col-sm-4">
+        <div ui-view="sidebar"></div>
+      </div>
+      <!-- Segunda Coluna *CONTEÚDO* -->
+      <div class="col-sm-7">
         <div ui-view="conteudo"></div>
-        <div ui-view="sidebar"></div>        
-        <div class="clr"></div>
+      </div>
+      <!--<div class="col-sm-7">-->
+      <!-- Terceira Coluna *ANUNCIO*-->
+      <div class="col-sm-1">
+        <div ui-view="anuncio-lateral"></div>
       </div>
     </div>
-    <div ui-view="rodape"></div>
   </div>
-  <script src="scripts/main-c4ecb4998e.js"></script>
+
+  <!-- Linha com RODAPÉ-->
+  <div ui-view="rodape"></div>
+
+  <script src="scripts/main-18bb49c1fc.js"></script>
+
 </body>
+
 </html>

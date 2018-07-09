@@ -1,51 +1,31 @@
-<!-- INICIO SIDEBAR -->
-<div class="sidebar">
+<div>
   <br>
-  <div class="gadget">
-    <h2>Regiões</h2>
-    <div class="clr"></div>
-    <ul class="sb_menu">
-      <li>
-        <a href="#">- Grande Colorado</a>
-      </li>
-      <li>
-        <a href="#">- DF 425</a>
-      </li>
-      <li>
-        <a href="#">- Região dos Lagos</a>
-      </li>
-      <li>
-        <a href="#">- Sobradinho II</a>
-      </li>
-      <li>
-        <a href="#">- Setor de Mansões</a>
-      </li>
-      <li>
-        <a href="#">- Sobradinho I</a>
-      </li>
-    </ul>
-  </div>
-  <div class="gadget">
-    <div style="width:100%; height:35px; margin-bottom:20px;">
-      <div style="display: inline-table; width:100%; border:0px">
-        <div style="float:left; width:auto; height:auto; border-bottom:solid 12px #2f3b66;">
-          <h2 style="margin:0px; font-weight:normal; font-size:16pt;">Categorias</h2>
-        </div>
-      </div>
-      <div style="display: inline-table; width:100%; height:5px; border-top:dashed 1px #2f3b66; text-align:left;">
-        <img src="images/seta_titulo_azul2.png" style="margin-left:10px;">
-      </div>
-    </div>
-    <br>
-    <div class="clr"></div>
-    <ul class="ex_menu" ng-repeat="cat in categorias">
-      <li>
-        <a ui-sref="app.categorias({id: cat.id})">
-          <img align="center" height="24" ng-src="{{cat.icone}}" /> &nbsp {{cat.nome}}
-        </a>
-      </li>
-      <hr>
-    </ul>
+  <h3>Regiões</h3>
+
+  <li>
+    <a href="#">Grande Colorado</a>
+  </li>
+  <li>
+    <a href="#">DF 425</a>
+  </li>
+  <li>
+    <a href="#">Região dos Lagos</a>
+  </li>
+  <li>
+    <a href="#">Sobradinho II</a>
+  </li>
+  <li>
+    <a href="#">Setor de Mansões</a>
+  </li>
+  <li>
+    <a href="#">Sobradinho I</a>
+  </li>
+  <br>
+  
+  <div ng-repeat="cat in categorias">
+    <a ui-sref="app.categorias({id: cat.id})">
+      <img align="center" height="24" ng-src="{{cat.icone}}" /> &nbsp {{cat.nome}}
+    </a>
+    <hr>
   </div>
 </div>
-<!-- FIM SIDEBAR -->
