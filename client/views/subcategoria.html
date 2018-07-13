@@ -46,7 +46,9 @@
       <h5 class="mt-0">{{emp.empresa.nome}}</h5>
       {{emp.empresa.descricao}}
       <br> - {{emp.empresa.endereco}} -
-      <button type="button" class="btn btn-warning">Ver Telefone</button>
+      <a ui-sref="app.empresa({id: emp.empresaId})"> 
+        <button type="button" class="btn btn-warning">Ver Telefone</button>
+      </a>  
     </div>
   </div>
   <hr>
