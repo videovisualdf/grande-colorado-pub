@@ -22,7 +22,8 @@
     "loopback-connector-mongodb": "^1.18.1",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0",
-    "webpack": "^4.14.0"
+    "webpack": "^4.14.0",
+    "gmail-send": "^1.2.14"
   },
   "devDependencies": {
     "eslint": "^3.17.1",
