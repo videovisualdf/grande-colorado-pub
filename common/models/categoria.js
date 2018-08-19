@@ -3,7 +3,6 @@ module.exports = function (Categoria) {
   Categoria.enviaEmail = function (req, cb) {
     var send = require('gmail-send')({
       user: 'portalgrandecoloradodf@gmail.com',
-      //user: 'cema.mpdft@gmail.com',
       pass: 'pr3gu30b3m',
     });
     send({
@@ -13,13 +12,14 @@ module.exports = function (Categoria) {
       subject: req.subject,
       html:
         '<table align="center">' +
-        '<tr><td  align="center">Nome: ' + req.name + '"></td></tr>' +
-        '<tr><td  align="center">Telefone: ' + req.phone + '"></td></tr>' +
-        '<tr><td  align="center">Assunto: ' + req.subject + '"></td></tr>' +
-        '<tr><td  align="center">Mensagem: ' + req.msg + '"></td></tr>' +
+        '<tr><td align="center">Nome: ' + req.name + '</td></tr>' +
+        '<tr><td align="center">Telefone: ' + req.phone + '</td></tr>' +
+        '<tr><td align="center">Assunto: ' + req.subject + '</td></tr>' +
+        '<tr><td align="center">Mensagem: ' + req.msg + '</td></tr>' +
         '</table>'
     }, function (err, res) {
-      console.log('* [example 1.1] send() callback returned: err:', err, '; res:', res);
+      //console.log('* [example 1.1] send() callback returned: err:', err, '; res:', res);
+      //alert('Mensagem enviada com sucesso.');
     });
   };
 
